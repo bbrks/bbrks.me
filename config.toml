@@ -24,7 +24,7 @@ disqusShortname = "bbrks"
 [[menu.links]]
   name = "CV"
   identifier = "cv.pdf"
-  url = "https://cdn.rawgit.com/bbrks/cv/92957df835e871c838710d96a130364077b28f87/cv.pdf"
+  url = "https://cdn.rawgit.com/bbrks/cv/e2194faafdfb5246066542b63850d53b9ec41fd4/cv.pdf"
   weight = 9999
 
 [[menu.social]]
