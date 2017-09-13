@@ -1,0 +1,5 @@
+# Ignore generated sites
+public/
+
+# Ignore images from posts
+content/posts/images/

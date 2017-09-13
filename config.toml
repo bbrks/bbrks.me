@@ -1,0 +1,45 @@
+baseURL = "https://bbrks.me/"
+languageCode = "en-gb"
+title = "Ben Brooks"
+theme = "gruvbox"
+sectionPagesMenu = "sections"
+paginate = 5
+disqusShortname = "bbrks"
+
+[permalinks]
+  posts = "/:slug"
+
+[params]
+  author = { name = "Ben Brooks" }
+  description = "Software Engineer & Gopher"
+  keywords = ["software engineering", "golang", "gopher", "blog", "programmer", "bbrks"]
+  titlePrefix = ""
+  titleSuffix = " | bbrks.me"
+  dateFormat = "2006-01-02"
+  menuItemPrefix = "~/"
+  postTruncateLength = 250
+  disqusAutoLoad = false
+  disqusAutoLoadCount = true
+
+[[menu.links]]
+  name = "CV"
+  identifier = "cv.pdf"
+  url = "https://cdn.rawgit.com/bbrks/cv/92957df835e871c838710d96a130364077b28f87/cv.pdf"
+  weight = 9999
+
+[[menu.social]]
+  name = "Twitter"
+  url = "https://twitter.com/bbrks_"
+  weight = 1
+[[menu.social]]
+  name = "GitHub"
+  url = "https://github.com/bbrks"
+  weight = 10
+[[menu.social]]
+  name = "Keybase"
+  url = "https://keybase.io/bbrks"
+  weight = 30
+[[menu.social]]
+  name = "LinkedIn"
+  url = "https://uk.linkedin.com/in/bbrks"
+  weight = 100
