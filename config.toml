@@ -5,6 +5,7 @@ theme = "gruvbox"
 sectionPagesMenu = "sections"
 paginate = 5
 disqusShortname = "bbrks"
+googleAnalyticsTrackingId = "UA-3687044-6"
 
 [permalinks]
   posts = "/:slug"
@@ -24,7 +25,7 @@ disqusShortname = "bbrks"
 [[menu.links]]
   name = "CV"
   identifier = "cv.pdf"
-  url = "https://cdn.rawgit.com/bbrks/cv/e2194faafdfb5246066542b63850d53b9ec41fd4/cv.pdf"
+  url = "https://rawgit.com/bbrks/cv/master/cv.pdf"
   weight = 9999
 
 [[menu.social]]
