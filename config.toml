@@ -5,7 +5,6 @@ theme = "gruvbox"
 sectionPagesMenu = "sections"
 paginate = 5
 disqusShortname = "bbrks"
-googleAnalyticsTrackingId = "UA-3687044-6"
 
 [permalinks]
   posts = "/:slug"
@@ -21,6 +20,7 @@ googleAnalyticsTrackingId = "UA-3687044-6"
   postTruncateLength = 250
   disqusAutoLoad = false
   disqusAutoLoadCount = true
+  googleAnalyticsTrackingId = "UA-3687044-6"
 
 [[menu.links]]
   name = "CV"
