@@ -1,3 +1,4 @@
 [submodule "themes/gruvbox"]
 	path = themes/gruvbox
 	url = git@github.com:bbrks/hugo-gruvbox-theme.git
+    branch = "bbrks.me"
