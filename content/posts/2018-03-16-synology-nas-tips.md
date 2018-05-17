@@ -2,7 +2,7 @@
 title: "Synology NAS Tips"
 description: "Getting a Synology NAS to behave a little more sanely..."
 date: 2018-05-15T00:09:10Z
-draft: true
+draft: false
 slug: "synology-nas-tips"
 tags: ["synology", "nas", "tips", "linux"]
 aliases: ["synology-nas-tips"]
@@ -73,14 +73,14 @@ I've always put myself in the Docker group to make it easier to manage container
 
 Add yourself to the `docker` group.
 ```
-    # synogroup --add docker <your_username>
+# synogroup --add docker <your_username>
 ```
 
 As well as the Synology-specific group command, you'll need to change the owner of the docker socket.
 
 Change the group of `/var/run/docker.sock` to be `docker`.
 ```
-    # chown root:docker /var/run/docker.sock
+# chown root:docker /var/run/docker.sock
 ```
 
 ## TLS terminating proxy to Docker containers {#tlsproxy}
@@ -94,8 +94,8 @@ The details of this step vary depending on your DNS host of choice, but the gist
 
 For example, assuming your NAS was running at `203.0.113.123`:
 ```
-    home.bbrks.me.   120 IN A     203.0.113.123
-    *.home.bbrks.me. 120 IN CNAME home.bbrks.me.
+home.bbrks.me.   120 IN A     203.0.113.123
+*.home.bbrks.me. 120 IN CNAME home.bbrks.me.
 ```
 
 This will allow me to use any subdomain to access my NAS over standard HTTP and HTTPS ports, and then route traffic to different containers depending on hostname.
@@ -222,7 +222,23 @@ Under `Destination`, you'll need to specify HTTP, localhost, and the exposed Doc
 
 In the example of me running an RSS reader on HTTP port 40701 in Docker, I can use the following setup:
 
-![Pocket Casts settings for Sonos Podcasts](/posts/images/2018/05/synology-reverse-proxy-rules.png)
+```
+Description: rss
+
+Source
+------
+Protocol: HTTPS
+Hostname: rss.home.bbrks.me
+Port:     443
+HSTS:     [x]
+HTTP/2:   [x]
+
+Destination
+------
+Protocol: HTTP
+Hostname: localhost
+Port:     40701
+```
 
 ## Additional RAM (16GB) {#ram}
 
