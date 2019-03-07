@@ -19,8 +19,7 @@ disqusShortname = "bbrks"
   menuItemPrefix = "~/"
   postTruncateLength = 250
   disqusAutoLoad = false
-  disqusAutoLoadCount = true
-  googleAnalyticsTrackingId = "UA-3687044-6"
+  disqusAutoLoadCount = false
 
 [[menu.links]]
   name = "CV"
