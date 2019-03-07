@@ -20,6 +20,7 @@ disqusShortname = "bbrks"
   postTruncateLength = 250
   disqusAutoLoad = false
   disqusAutoLoadCount = false
+  logo = "logo.jpg"
 
 [[menu.links]]
   name = "CV"
