@@ -22,12 +22,6 @@ disqusShortname = "bbrks"
   disqusAutoLoadCount = false
   logo = "logo.jpg"
 
-[[menu.links]]
-  name = "CV"
-  identifier = "cv.pdf"
-  url = "https://rawgit.com/bbrks/cv/master/cv.pdf"
-  weight = 9999
-
 [[menu.social]]
   name = "Twitter"
   url = "https://twitter.com/bbrks_"
