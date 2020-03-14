@@ -25,3 +25,5 @@ watch: clean
 build: clean
 	$(HUGO)
 
+docker: build
+	docker build -t bbrks.me .
