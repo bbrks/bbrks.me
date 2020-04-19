@@ -21,4 +21,5 @@ RUN /usr/bin/hugo
 ###
 
 FROM nginx
+COPY nginx-site.conf /etc/nginx/conf.d/default.conf
 COPY --from=builder /site/public /usr/share/nginx/html
