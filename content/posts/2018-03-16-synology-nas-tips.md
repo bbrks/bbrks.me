@@ -28,7 +28,7 @@ There were however, some creature comforts that I immediately missed when using 
 
 ## Key-Based SSH Logins {#sshkeys}
 
-This is a must. Being able to disable password login via SSH is a huge security win, and makes my life easier for keys with no passphrase.
+Being able to disable password login via SSH is a huge security win, and makes my life easier for keys with no passphrase.
 
 I found a great post by [Scott Granneman](https://www.chainsawonatireswing.com/) detailing what it takes to get SSH keys working under DSM, but unfortunately involves a bit of hoop-jumping.
 I'll copy the steps that Scott has described in more detail, just for reference's sake:
