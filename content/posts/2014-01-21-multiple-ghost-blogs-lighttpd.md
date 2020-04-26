@@ -8,6 +8,10 @@ tags = ["guide", "linux", "ghost", "lighttpd"]
 aliases = ["multiple-ghost-blogs-lighttpd"]
 +++
 
+<div class="alert alert-warning"><strong>Warning!</strong> This guide is out of date/obsolete.</div>
+
+---
+
 This will be a super simple guide on how to quickly install multiple Ghost blogs on a Linux server, running Lighttpd as an internal proxy. This guide also takes you through running Ghost through forever, which ensures it is always running.
 
 You don't need the proxying, but if you don't want to be messing around with port numbers it's the easiest way to set stuff up.

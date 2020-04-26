@@ -9,6 +9,9 @@ disqusShortname = "bbrks"
 [permalinks]
   posts = "/:slug"
 
+[markup.goldmark.renderer]
+  unsafe= true
+
 [params]
   author = { name = "Ben Brooks" }
   description = "Software Engineer & Gopher"

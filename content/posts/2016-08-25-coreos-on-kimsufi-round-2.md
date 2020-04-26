@@ -8,6 +8,10 @@ tags = ["linux", "guide", "docker", "coreos", "containers", "devops"]
 aliases = ["coreos-on-kimsufi-round-2"]
 +++
 
+<div class="alert alert-warning"><strong>Warning!</strong> This guide is out of date/obsolete.</div>
+
+---
+
 Since the original [CoreOS on Kimsufi post](/coreos-dedicated-server-setup/), things have changed slightly. The good news is, there's a much nicer way to get up and running now! With OVH's new installation template, getting CoreOS running on a Kimsufi server is now even easier!
 
 Even better is that it comes with etcd, fleet and all of CoreOS' good stuff pre-configured and ready to go out of the box.
