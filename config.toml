@@ -23,7 +23,7 @@ disqusShortname = "bbrks"
   postTruncateLength = 250
   disqusAutoLoad = false
   disqusAutoLoadCount = false
-  logo = "logo.jpg"
+  logo = "dalle-avatar-1-bbrks.png"
 
 [[menu.social]]
   name = "Mastodon"
