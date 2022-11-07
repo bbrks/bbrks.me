@@ -1,6 +1,6 @@
 FROM alpine:latest AS builder
 
-ENV HUGO_VERSION 0.67.0
+ENV HUGO_VERSION 0.105.0
 ENV HUGO_BINARY hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
 
 RUN set -x && \
