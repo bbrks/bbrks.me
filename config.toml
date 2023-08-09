@@ -26,8 +26,8 @@ disqusShortname = "bbrks"
   logo = "dalle-avatar-1-bbrks.png"
 
 [[menu.social]]
-  name = "Mastodon"
-  url = "https://mstdn.io/@bbrks"
+  name = "μBlog"
+  url = "https://ublog.fedi.bbrks.me/bbrks"
   weight = 1
   [menu.social.params]
     rel = 'me'
