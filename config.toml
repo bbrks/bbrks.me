@@ -15,7 +15,7 @@ disqusShortname = "bbrks"
 [params]
   author = { name = "Ben Brooks" }
   description = "Software Engineer & Gopher"
-  keywords = ["software engineering", "golang", "gopher", "blog", "programmer", "bbrks"]
+  keywords = ["software engineering", "golang", "gopher", "blog", "programmer", "bbrks", "Ben Brooks"]
   titlePrefix = ""
   titleSuffix = " | bbrks.me"
   dateFormat = "2006-01-02"
