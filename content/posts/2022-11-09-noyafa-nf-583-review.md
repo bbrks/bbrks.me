@@ -62,16 +62,3 @@ The NF-586 is Android and USB-C only.
 The device exposes itself as a normal webcam when plugged into a computer. The images are raw greyscale and have no temperature information present.
 
 It may be possible to write a USB driver to extract high/low temperature values and interpret the image like the Android app does, however this is beyond my capabilities.
-
-#### lspci
-
-```
-TODO
-```
-
-#### lsusb
-
-```
-TODO
-```
-
