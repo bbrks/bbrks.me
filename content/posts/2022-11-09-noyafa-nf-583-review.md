@@ -1,9 +1,15 @@
 ---
-title: "Budget thermal imaging on a NOYAFA NF-583"
+title: "Budget thermal imaging on a NOYAFA NF-583 - now in Linux"
 description: "Example images, videos, and app install process"
 date: 2022-11-09T13:09:21Z
 slug: "noyafa-nf-583-review"
-tags: ["noyafa", "nf-583", "review", "thermal imaging", "flir", "android", "usb-c"]
+tags: ["noyafa", "nf-583", "review", "thermal imaging", "flir", "android", "usb-c", "linux", "v42l"]
+---
+
+**Update:** 2026-02-26 - See update under Linux for the v4l2 proxy to get this thermal camera properly working in Linux!
+
+![v4l2-proxy-radiometric-rs thermal image TUI and ffplay image output](/posts/images/Screenshot_20260225_225504.png)
+
 ---
 
 I was on the market for a cheap(ish) thermal imaging camera as a way to DIY survey the thermal insulating properties of my current house, soon to be new house, and take spooky pictures of my dog.
@@ -59,6 +65,16 @@ The NF-586 is Android and USB-C only.
 
 ### Linux
 
-The device exposes itself as a normal webcam when plugged into a computer. The images are raw greyscale and have no temperature information present.
+The device exposes itself as a "normal" webcam when plugged into a Linux. The images are raw greyscale and have no temperature information present.
 
-It may be possible to write a USB driver to extract high/low temperature values and interpret the image like the Android app does, however this is beyond my capabilities.
+**Update:** 2026-02-26
+
+For a couple of years this is as far as I went with it... However, thanks to some help from Claude Code, I've pulled the radiometric data from the secondary camera feed in a way that produces a fully tone-mapped and overlay compatible camera feed on Linux.
+
+![/dev/video0 raw radiometric data for NOYAFA NF-583](/posts/images/Screenshot_20260225_225558.png)
+
+I have written a v4l2 proxy utility that uses v4l2-loopback to read per-pixel radiometric data and produce a tonemapped image to another camera ouput, much like the Android app does.
+
+![v4l2-proxy-radiometric-rs thermal image tonemap palettes](/posts/images/Screenshot_20260225_225700.png)
+
+Check it out! [v4l2-proxy-radiometric-rs](https://github.com/bbrks/v4l2-proxy-radiometric-rs)
