@@ -1,14 +1,14 @@
 ---
-title: "Budget thermal imaging on a NOYAFA NF-583 - now in Linux"
+title: "Budget thermal imaging on a NOYAFA NF-583"
 description: "Example images, videos, and app install process"
 date: 2022-11-09T13:09:21Z
 slug: "noyafa-nf-583-review"
 tags: ["noyafa", "nf-583", "review", "thermal imaging", "flir", "android", "usb-c", "linux", "v42l"]
 ---
 
-**Update:** 2026-02-26 - See update under Linux for the v4l2 proxy to get this thermal camera properly working in Linux!
+**Update:** 2026-02-26 - See update under [Linux](#linux) for the v4l2 proxy to get this thermal camera properly working in Linux!
 
-![v4l2-proxy-radiometric-rs thermal image TUI and ffplay image output](/posts/images/Screenshot_20260225_225504.png)
+![v4l2-proxy-radiometric-rs thermal image TUI and ffplay image output](/posts/images/2022/11/Screenshot_20260225_225504.png)
 
 ---
 
@@ -71,10 +71,10 @@ The device exposes itself as a "normal" webcam when plugged into a Linux. The im
 
 For a couple of years this is as far as I went with it... However, thanks to some help from Claude Code, I've pulled the radiometric data from the secondary camera feed in a way that produces a fully tone-mapped and overlay compatible camera feed on Linux.
 
-![/dev/video0 raw radiometric data for NOYAFA NF-583](/posts/images/Screenshot_20260225_225558.png)
+![/dev/video0 raw radiometric data for NOYAFA NF-583](/posts/images/2022/11/Screenshot_20260225_225558.png)
 
 I have written a v4l2 proxy utility that uses v4l2-loopback to read per-pixel radiometric data and produce a tonemapped image to another camera ouput, much like the Android app does.
 
-![v4l2-proxy-radiometric-rs thermal image tonemap palettes](/posts/images/Screenshot_20260225_225700.png)
+![v4l2-proxy-radiometric-rs thermal image tonemap palettes](/posts/images/2022/11/Screenshot_20260225_225700.png)
 
 Check it out! [v4l2-proxy-radiometric-rs](https://github.com/bbrks/v4l2-proxy-radiometric-rs)
