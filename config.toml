@@ -14,8 +14,8 @@ disqusShortname = "bbrks"
 
 [params]
   author = { name = "Ben Brooks" }
-  description = "Software Engineer & Gopher"
-  keywords = ["software engineering", "golang", "gopher", "blog", "programmer", "bbrks", "Ben Brooks"]
+  description = "Principal Software Engineer"
+  keywords = ["software engineering", "golang", "blog", "programmer", "bbrks", "Ben Brooks", "Couchbase"]
   titlePrefix = ""
   titleSuffix = " | bbrks.me"
   dateFormat = "2006-01-02"
@@ -25,12 +25,12 @@ disqusShortname = "bbrks"
   disqusAutoLoadCount = false
   logo = "dalle-avatar-1-bbrks.png"
 
-[[menu.social]]
-  name = "μBlog"
-  url = "https://ublog.fedi.bbrks.me/bbrks"
-  weight = 1
-  [menu.social.params]
-    rel = 'me'
+# [[menu.social]]
+#   name = "μBlog"
+#   url = "https://ublog.fedi.bbrks.me/bbrks"
+#   weight = 1
+#   [menu.social.params]
+#     rel = 'me'
 [[menu.social]]
   name = "GitHub"
   url = "https://github.com/bbrks"
