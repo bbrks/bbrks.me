@@ -65,13 +65,15 @@ The NF-586 is Android and USB-C only.
 
 ### Linux
 
-The device exposes itself as a "normal" webcam when plugged into a Linux. The images are raw greyscale and have no temperature information present.
+The device exposes itself as a "normal" 160x120 webcam when plugged into a Linux. The images are raw greyscale and have no temperature information present.
 
 **Update:** 2026-02-26
 
-For a couple of years this is as far as I went with it... However, thanks to some help from Claude Code, I've pulled the radiometric data from the secondary camera feed in a way that produces a fully tone-mapped and overlay compatible camera feed on Linux.
+I found out that a 160x240 feed is available with some data in the second half of the frame.
 
 ![/dev/video0 raw radiometric data for NOYAFA NF-583](/posts/images/2022/11/Screenshot_20260225_225558.png)
+
+For a couple of years this is as far as I went with it... However, thanks to some help from Claude Code, I've determined what the encoding of this per-pixel radiometric is and processed in a way that produces a fully tone-mapped and overlay compatible camera feed on Linux.
 
 I have written a v4l2 proxy utility that uses v4l2-loopback to read per-pixel radiometric data and produce a tonemapped image to another camera ouput, much like the Android app does.
 
