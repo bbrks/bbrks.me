@@ -1,16 +1,21 @@
 baseURL = "https://bbrks.me/"
-languageCode = "en-gb"
+locale = "en-gb"
 title = "Ben Brooks"
 theme = "gruvbox"
 sectionPagesMenu = "sections"
-paginate = 5
-disqusShortname = "bbrks"
+capitalizeListTitles = false
+
+[pagination]
+  pagerSize = 5
+
+[services.disqus]
+  shortname = "bbrks"
 
 [permalinks]
   posts = "/:slug"
 
 [markup.goldmark.renderer]
-  unsafe= true
+  unsafe = true
 
 [params]
   author = { name = "Ben Brooks" }

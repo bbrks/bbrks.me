@@ -1,0 +1,22 @@
+# Plain static file server. TLS and the public hostname are handled by the
+# reverse proxy in front of this container, so we just listen on :80.
+{
+	admin off
+	auto_https off
+}
+
+:80 {
+	root * /srv
+	encode zstd gzip
+	file_server
+
+	# Same cache rules as the old nginx config.
+	@html path / */ *.html *.xml
+	header @html Cache-Control "no-cache"
+
+	@css path *.css
+	header @css Cache-Control "public, max-age=604800"
+
+	@img path *.png *.jpg *.jpeg *.gif *.webp *.svg *.ico
+	header @img Cache-Control "public, max-age=1209600"
+}

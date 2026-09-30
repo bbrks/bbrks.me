@@ -1,0 +1,5 @@
+.git
+.github
+public/
+resources/
+.hugo_build.lock

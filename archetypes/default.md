@@ -1,9 +1,9 @@
 ---
-title: "{{ replace .TranslationBaseName "-" " " | title }}"
+title: "{{ replace .File.ContentBaseName "-" " " | title }}"
 description: ""
 date: {{ .Date }}
 draft: true
-slug: "{{ .TranslationBaseName }}"
+slug: "{{ .File.ContentBaseName }}"
 tags: []
-aliases: ["{{ .TranslationBaseName }}"]
+aliases: ["{{ .File.ContentBaseName }}"]
 ---

@@ -1,25 +1,14 @@
-FROM alpine:latest AS builder
+ARG HUGO_VERSION=0.167.0
 
-ENV HUGO_VERSION 0.105.0
-ENV HUGO_BINARY hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
+FROM ghcr.io/gohugoio/hugo:v${HUGO_VERSION} AS builder
 
-RUN set -x && \
-  apk add --update wget ca-certificates && \
-  wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/${HUGO_BINARY} && \
-  tar xzf ${HUGO_BINARY} && \
-  rm -r ${HUGO_BINARY} && \
-  mv hugo /usr/bin && \
-  apk del wget ca-certificates && \
-  rm /var/cache/apk/*
+COPY --chown=hugo:hugo . /project
 
-COPY ./ /site
+RUN hugo --gc
 
-WORKDIR /site
 
-RUN /usr/bin/hugo
 
-###
+FROM caddy:2-alpine
 
-FROM nginx
-COPY nginx-site.conf /etc/nginx/conf.d/default.conf
-COPY --from=builder /site/public /usr/share/nginx/html
+COPY Caddyfile /etc/caddy/Caddyfile
+COPY --from=builder /project/public /srv

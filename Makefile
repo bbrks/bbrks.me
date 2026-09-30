@@ -1,4 +1,4 @@
-.PHONY: all clean watch help post
+.PHONY: all build clean watch help post docker-build docker-run
 
 HUGO := hugo
 
@@ -10,6 +10,8 @@ help:
 	@echo "  clean   Cleans all build files"
 	@echo "  watch   Runs hugo in watch mode, waiting for changes"
 	@echo "  post    Makes a new post"
+	@echo "  docker-build  Builds the Docker image"
+	@echo "  docker-run    Runs the Docker image on http://localhost:8080"
 
 post:
 	$(eval FILENAME := $(shell date "+%Y-%m-%d"))
@@ -24,3 +26,9 @@ watch: clean
 
 build: clean
 	$(HUGO)
+
+docker-build:
+	docker build -t bbrks.me .
+
+docker-run: docker-build
+	docker run --rm -p 8080:80 bbrks.me
